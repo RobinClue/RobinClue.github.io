@@ -168,7 +168,7 @@ h1 {
 
 #locator {
   position: fixed;
-  visibility: visible;
+  visibility: hidden;
   bottom: 0px;
   z-index: 2;
 }
