@@ -161,15 +161,6 @@ h1 {
 
 
 
-/*fade-in jQuery*/
-
-#test p {
-    opacity: 0;
-    font-size: 21px;
-    margin-top: 25px;
-    text-align: center;
-}
-
 
 
 
