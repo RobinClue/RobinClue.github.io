@@ -85,6 +85,7 @@ html {
   text-align: center;
 	top: 17px;
 	position: fixed;
+  z-index: 10;
 
 }
 
@@ -122,18 +123,157 @@ ul.header-socials li a:hover {
 
 
 
+/*bg-video*/
 
-
-
-
-
-
-
-/*bottom black bar*/
-
-#locator {
+.tv {
   position: fixed;
-  visibility: hidden;
-  bottom: 0px;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+}
+.tv #tv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+}
+.tv .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+}
+h1 {
+  color: white;
+  text-align: center;
+  margin-top: 35vh;
+  font-size: 64px;
+  text-shadow: 1px 1px 3px black;
+}
+
+
+
+
+
+
+
+
+/*top and bottom black bar*/
+
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 6%;
+  background-color: black;
+  color: #f6e39c;
+  text-align: center;
+  z-index: 1
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: #f6e39c;
+  text-align: center;
+  z-index: 1
+}
+
+
+
+
+/*youtube mobile/desktop loading*/
+
+
+.cover {
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: 2;
+
+  width: 100%;
+  height: 100%;
+
+  .hi {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    color: #fff;
+
+    font-family: 'Roboto Slab', serif;
+    font-size: 24px;
+    line-height: 26px;
+    text-align: center;
+
+    span {
+      color: #ff0;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    em {
+      font-style: normal;
+
+      &.hidden {
+        display: none;
+      }
+    }
+  }
+}
+
+.tv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  .screen {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+
+    margin: auto;
+
+    opacity: 0;
+    transition: opacity .5s;
+
+    &.active {
+      opacity: 1;
+    }
+  }
+}
+
+
+/*loading*/
+
+.hide{
+  display:none;
+}
+.show{
+  display:block;
+  position:absolute;
+  left: 200px;
+  top: 200px;
+  color: blue;
 }
