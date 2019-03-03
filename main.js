@@ -1,4 +1,13 @@
-setTimeout(function(){ $("#myDiv").show(); }, 30000);
+window.onload=function()  //executes when the page finishes loading
+{
+  setTimeout(func1, 500);  //sets a timer which calls function func1 after 2,000 milliseconds = 2 secs.
+
+};
+function func1()
+{
+  document.getElementById("tv").className="show";
+}
+
 
 var tag = document.createElement('script');
 		tag.src = 'https://www.youtube.com/player_api';
@@ -70,6 +79,3 @@ $('.hi span:last-of-type').on('click', function(){
   $('.hi em:nth-of-type(2)').html('~');
   tv.pauseVideo();
 });
-
-
-setTimeout(function(){ $("#myDiv").show(); }, 3000);
