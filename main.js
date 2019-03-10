@@ -1,6 +1,6 @@
 window.onload=function()  //executes when the page finishes loading
 {
-  setTimeout(func1, 300);  //sets a timer which calls function func1 after 2,000 milliseconds = 2 secs.
+  setTimeout(func1, 30000);  //sets a timer which calls function func1 after 2,000 milliseconds = 2 secs.
 
 };
 function func1()
@@ -9,16 +9,20 @@ function func1()
 }
 
 
+
+
+
 var tag = document.createElement('script');
 		tag.src = 'https://www.youtube.com/player_api';
 var firstScriptTag = document.getElementsByTagName('script')[0];
 		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 var tv,
-		playerDefaults = {loop: 1, playlist: '3wPZTHybWnY', autoplay: 0, autohide: 1, modestbranding: 0, rel: 0, showinfo: 0, controls: 0, disablekb: 1, enablejsapi: 0, iv_load_policy: 3};
+		playerDefaults = {autoplay: 0, autohide: 1, modestbranding: 0, rel: 0, showinfo: 0, controls: 0, disablekb: 1, enablejsapi: 0, iv_load_policy: 3};
 var vid = [
-			{'videoId': '3wPZTHybWnY', 'suggestedQuality': 'hd720'},
+			{'videoId': '3wPZTHybWnY',}
 		],
-    currVid = '3wPZTHybWnY';
+		randomVid = Math.floor(Math.random() * vid.length),
+    currVid = randomVid;
 
 $('.hi em:last-of-type').html(vid.length);
 
@@ -27,7 +31,7 @@ function onYouTubePlayerAPIReady(){
 }
 
 function onPlayerReady(){
-  tv.loadVideoById('3wPZTHybWnY');
+  tv.loadVideoById(vid[currVid]);
   tv.mute();
 }
 
@@ -75,7 +79,34 @@ $('.hi span:first-of-type').on('click', function(){
   }
 });
 
-$('.hi span:last-of-type').on('click', function(){
-  $('.hi em:nth-of-type(2)').html('~');
-  tv.pauseVideo();
+
+
+
+
+$(document).ready(function() {
+    $("div#tv").removeClass("hidden");
 });
+
+
+
+/*not currently working?
+
+function socialsRescale(){
+
+  var w = $(window).width()+200,
+    h = $(window).height()+200;
+
+  if (w/h > 16/9){
+    tv.setSize(w, w/16*9);
+    $('.socialswrapper .screen').css({'left': '0px'});
+  } else {
+    tv.setSize(h/9*16, h);
+    $('.socialswrapper .screen').css({'left': -($('.socialswrapper .screen').outerWidth()-w)/2});
+  }
+}
+
+$(window).on('load resize', function(){
+  socialsRescale();
+});
+
+*/
