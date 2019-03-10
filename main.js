@@ -1,6 +1,6 @@
 window.onload=function()  //executes when the page finishes loading
 {
-  setTimeout(func1, 30000);  //sets a timer which calls function func1 after 2,000 milliseconds = 2 secs.
+  setTimeout(func1, 2200);  //sets a timer which calls function func1 after 2,000 milliseconds = 2 secs.
 
 };
 function func1()
@@ -83,13 +83,9 @@ $('.hi span:first-of-type').on('click', function(){
 
 
 
-$(document).ready(function() {
-    $("div#tv").removeClass("hidden");
-});
 
 
-
-/*not currently working?
+/*not currently working? OK bc something else is making them rescale
 
 function socialsRescale(){
 
