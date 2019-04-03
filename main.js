@@ -19,7 +19,7 @@ var firstScriptTag = document.getElementsByTagName('script')[0];
 var tv,
 		playerDefaults = {autoplay: 0, autohide: 1, modestbranding: 0, rel: 0, showinfo: 0, controls: 0, disablekb: 1, enablejsapi: 0, iv_load_policy: 3};
 var vid = [
-			{'videoId': '3wPZTHybWnY',}
+			{'videoId': 'KiMCd3rcmtE',}
 		],
 		randomVid = Math.floor(Math.random() * vid.length),
     currVid = randomVid;
