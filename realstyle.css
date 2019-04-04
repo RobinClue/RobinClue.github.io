@@ -22,6 +22,7 @@ html {
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  font-size: 19px;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -34,6 +35,7 @@ html {
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  font-size: 19px;
 
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
@@ -84,8 +86,35 @@ html {
   width: 100%;
   text-align: center;
 	top: 17px;
+  left: 0px;
 	position: fixed;
   z-index: 10;
+
+}
+
+
+
+
+
+
+
+@font-face {
+font-family: 'Gotham Bold';
+font-style: normal;
+font-weight: normal;
+color: #f6e39c;
+src: local('Gotham Bold'), url('Gotham Bold.woff') format('woff');
+}
+
+.add-text1 {
+  font-family: 'Gotham Bold' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: 22px;
 
 }
 
@@ -98,14 +127,17 @@ html {
   transform: translateY(-50%);
 }*/
 
+
+
 ul.header-socials li {
 	display: inline-block;
-	margin-right: 16px;
+	margin-right: 8px;
+  margin-left: 8px;
 }
 ul.header-socials li a {
 	color: #f6e39c;
 	text-decoration: none;
-	font-size: 19px;
+	/*font-size: 19px;*/
 	display: block;
 }
 ul.header-socials li a:hover {
@@ -114,6 +146,7 @@ ul.header-socials li a:hover {
 
 .header-socials {
   text-align: center;
+  padding-inline-start: 0px;
   }
 .header-socials li {
   display:inline-block;
@@ -127,7 +160,8 @@ ul.header-socials li a:hover {
 .header-socials li i {
   width:70px;
   height:70px;
-  margin-right: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 
